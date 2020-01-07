@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int num1, num2, add;
+		System.out.println("Enter two integer for calculation:");
+		Scanner sc=new Scanner(System.in);
+		num1=sc.nextInt();
+		num2=sc.nextInt();
+		add=num1+num2;
+		int sub=num1-num2;
+		int mul=num1*num2;
+		float div=num1/num2;
+		System.out.println("Addition of " + num1 + " and " + num2 + " = " +add);
+		System.out.println("Subracion of " + num1 + " and " + num2 + " = " +sub);
+		System.out.println("Multiplication of " + num1 + " and " + num2 + " = " +mul);
+		System.out.println("Division of " + num1 + " and " + num2 + " = " +div);
+	}
+}
