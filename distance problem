@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* 
+        2D points from orgin and print with highest distance 
+        */
+        double x1,x2,x3,y1,y2,y3;
+        Scanner sc=new Scanner(System.in);
+        x1=sc.nextDouble();
+        y1=sc.nextDouble();
+        x2=sc.nextDouble();
+        y2=sc.nextDouble();
+        x3=sc.nextDouble();
+        y3=sc.nextDouble();
+        Point p1=new Point(x1,y1);
+        Point p2=new Point(x2,y2);
+        Point p3=new Point(x3,y3);
+        Point res=hightest(p1,p2,p3);
+        System.out.format("%.1f\n",res.x);
+        System.out.format("%.1f",res.y);
+    }
+        public static Point hightest(Point p1, Point p2, Point p3){
+        double d1=Math.sqrt(p1.x*p1.x +p1.y*p1.y);
+        double d2=Math.sqrt(p2.x*p2.x +p2.y*p2.y);
+        double d3=Math.sqrt(p3.x*p3.x +p3.y*p3.y);
+        return d1>d2?(d1>d3?p1:p3):(d2>d3?p2:p3);
+        
+
+    }
+}
+
+class Point
+{
+    double x,y;
+
+    Point(double x, double y)
+    {
+        this.x=x;
+        this.y=y;
+    }
+}
